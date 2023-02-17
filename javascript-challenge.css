@@ -84,3 +84,7 @@ form[kjs-type=extendingForm] [kjs-role=extension] {
     display: none; }
   [kjs-type=tabs] [kjs-role=content] img {
     width: 100%; }
+
+#control_checkbox:checked, input[type="checkbox"][role=related_checkbox]:checked {
+  accent-color: #00B7BD;
+}

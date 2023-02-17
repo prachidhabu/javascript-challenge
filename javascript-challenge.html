@@ -70,7 +70,14 @@
 
     <section class="example">
       <h2>Linked Checkboxes</h2>
-      TODO
+      <div class="linkedCheckbox">
+        <p>What is Your Favorite Pet?</p>
+        <input id="control_checkbox" type="checkbox" name="select_pet" onclick="handleControlCheck();" >Select<br>
+        <br>
+        <input role="related_checkbox" type="checkbox" name="favorite_pet" value="Cats" onclick="handleRelatedCheck();" >Cats<br>      
+        <input role="related_checkbox" type="checkbox" name="favorite_pet" value="Dogs" onclick="handleRelatedCheck();" >Dogs<br>      
+        <input role="related_checkbox" type="checkbox" name="favorite_pet" value="Birds" onclick="handleRelatedCheck();" >Birds<br> 
+      </div>
     </section>
 
   </body>

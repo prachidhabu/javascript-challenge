@@ -138,3 +138,31 @@ function tabs(widget) {
 module.exports = tabs;
 
 },{}]},{},[2]);
+
+function handleControlCheck(){
+  var control_checkbox = document.getElementById("control_checkbox");
+  var related_checkboxs = document.querySelectorAll('[role="related_checkbox"]');
+  if(control_checkbox.checked){
+    related_checkboxs.forEach((rel_checkbox) => { rel_checkbox.checked = true ; });
+  }else{
+    related_checkboxs.forEach((rel_checkbox) => { rel_checkbox.checked = false ; });
+  }
+}
+
+function handleRelatedCheck(){
+  var control_checkbox = document.getElementById("control_checkbox");
+  var related_checkboxs = document.querySelectorAll('[role="related_checkbox"]');
+  var checked_related_checkboxes = document.querySelectorAll('[role="related_checkbox"]:checked')
+  var checked_related_checkboxes = document.querySelectorAll('[role="related_checkbox"]:checked')
+  related_checkboxs.forEach((rel_checkbox) => {
+    if(related_checkboxs.length == checked_related_checkboxes.length){
+      control_checkbox.indeterminate = false;
+      control_checkbox.checked = true
+    }else if(checked_related_checkboxes.length == 0){
+      control_checkbox.indeterminate = false;
+      control_checkbox.checked = false
+    }else{
+      control_checkbox.indeterminate = true;
+    }
+  });
+}
